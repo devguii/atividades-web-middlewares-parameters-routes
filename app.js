@@ -8,6 +8,13 @@ var indexRouter = require("./routes/index");
 const atv1Router = require("./routes/atv1");
 const atv2Router = require("./routes/atv2");
 const atv3Router = require("./routes/atv3");
+const atv4Router = require("./routes/atv4");
+// const atv5Router = require("./routes/atv5");
+// const atv6Router = require("./routes/atv6");
+// const atv7Router = require("./routes/atv7");
+// const atv8Router = require("./routes/atv8");
+// const atv9Router = require("./routes/atv9");
+// const atv10Router = require("./routes/atv10");
 
 var app = express();
 
@@ -25,6 +32,13 @@ app.use("/", indexRouter);
 app.use("/atv1", atv1Router);
 app.use("/atv2", atv2Router);
 app.use("/atv3", atv3Router);
+app.use("/atv4", atv4Router);
+// app.use("/atv5", atv5Router);
+// app.use("/atv6", atv6Router);
+// app.use("/atv7", atv7Router);
+// app.use("/atv8", atv8Router);
+// app.use("/atv9", atv9Router);
+// app.use("/atv10", atv10Router);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
