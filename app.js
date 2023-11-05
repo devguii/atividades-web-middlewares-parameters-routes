@@ -13,7 +13,7 @@ const atv5Router = require("./routes/atv5");
 const atv6Router = require("./routes/atv6");
 const atv7Router = require("./routes/atv7");
 const atv8Router = require("./routes/atv8");
-// const atv9Router = require("./routes/atv9");
+const atv9Router = require("./routes/atv9");
 // const atv10Router = require("./routes/atv10");
 
 var app = express();
@@ -28,6 +28,13 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
+app.contador = 0;
+app.use((req, res, next) => {
+  app.contador++;
+  req.acesso = app.contador;
+  next();
+});
+
 app.use("/", indexRouter);
 app.use("/atv1", atv1Router);
 app.use("/atv2", atv2Router);
@@ -37,7 +44,7 @@ app.use("/atv5", atv5Router);
 app.use("/atv6", atv6Router);
 app.use("/atv7", atv7Router);
 app.use("/atv8", atv8Router);
-// app.use("/atv9", atv9Router);
+app.use("/atv9", atv9Router);
 // app.use("/atv10", atv10Router);
 
 // catch 404 and forward to error handler
