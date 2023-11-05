@@ -4,11 +4,11 @@ body {
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 p {
-  font-size: 30px;
+  font-size: 22px;
 }
 
 a {
@@ -16,4 +16,13 @@ a {
   font-weight: bold;
   text-decoration: none;
   color: #00b7ff;
+  cursor: pointer;
+}
+
+a:hover {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: whitesmoke;
 }
