@@ -14,7 +14,7 @@ const atv6Router = require("./routes/atv6");
 const atv7Router = require("./routes/atv7");
 const atv8Router = require("./routes/atv8");
 const atv9Router = require("./routes/atv9");
-// const atv10Router = require("./routes/atv10");
+const atv10Router = require("./routes/atv10");
 
 var app = express();
 
@@ -45,7 +45,7 @@ app.use("/atv6", atv6Router);
 app.use("/atv7", atv7Router);
 app.use("/atv8", atv8Router);
 app.use("/atv9", atv9Router);
-// app.use("/atv10", atv10Router);
+app.use("/atv10", atv10Router);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
