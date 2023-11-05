@@ -20,6 +20,8 @@ router.get("/:id", validaCodigo, (req, res) => {
   res.end("Codigo: " + req.id);
 });
 
-router.post("/", (req, res) => {});
+router.get("/", (req, res) => {
+  res.end("Informe o codigo atraves da url! Exemplo: '.../atv8/:id' ");
+});
 
 module.exports = router;
