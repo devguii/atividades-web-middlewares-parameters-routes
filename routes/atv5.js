@@ -2,7 +2,9 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.end("Informe a operacao e os valores para x e y na url!");
+  res.end(
+    "Informe a operacao e os valores para x e y na url! Exemplo: '../atv5/*OPERACAO*/?x=*VALOR 1*&y=*VALOR 2*'"
+  );
   return;
 });
 
@@ -10,7 +12,9 @@ router.get("/:operacao", (req, res) => {
   let { x, y } = req.query;
 
   if (!x || !y) {
-    res.end("Informe valores para x e y!");
+    res.end(
+      "Informe valores para x e y! Exemplo: '../atv5/*OPERACAO*/?x=*VALOR 1*&y=*VALOR 2*'"
+    );
     return;
   }
 
