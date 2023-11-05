@@ -12,7 +12,7 @@ const atv4Router = require("./routes/atv4");
 const atv5Router = require("./routes/atv5");
 const atv6Router = require("./routes/atv6");
 const atv7Router = require("./routes/atv7");
-// const atv8Router = require("./routes/atv8");
+const atv8Router = require("./routes/atv8");
 // const atv9Router = require("./routes/atv9");
 // const atv10Router = require("./routes/atv10");
 
@@ -36,7 +36,7 @@ app.use("/atv4", atv4Router);
 app.use("/atv5", atv5Router);
 app.use("/atv6", atv6Router);
 app.use("/atv7", atv7Router);
-// app.use("/atv8", atv8Router);
+app.use("/atv8", atv8Router);
 // app.use("/atv9", atv9Router);
 // app.use("/atv10", atv10Router);
 
