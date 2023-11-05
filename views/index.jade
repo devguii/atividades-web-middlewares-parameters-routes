@@ -3,6 +3,10 @@ extends layout
 block content
   h1= title
   p Seja bem-vindo(a) a página com as atividades
+  p Documento com os enunciados das atividades:
+  object(data="/documents/Atividades de parâmetros.pdf", type="application/pdf", width= "500", height="300") 
+  br
+ 
   p Por favor, selecione qual atividade deseja, para ir para a rota com a resolução:
   a(href="atv1/a") Atividade 1
   br
@@ -23,3 +27,5 @@ block content
   a(href="atv9") Atividade 9 
   br
   a(href="atv10") Atividade 10 
+  br
+  
